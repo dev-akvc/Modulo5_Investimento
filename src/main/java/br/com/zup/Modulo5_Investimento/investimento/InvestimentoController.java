@@ -20,6 +20,6 @@ public class InvestimentoController {
 
     @PutMapping("/{email}")
     public void cadastrarInvestimento(@RequestBody @Valid  InvestimentoDTO investimentoDTO){
-        investimentoService.cadastrarInvestimento(investimentoDTO.getEmail());
+        investimentoService.cadastrarInvestimento(investimentoDTO);
     }
 }
