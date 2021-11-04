@@ -8,6 +8,7 @@ public enum Risco {
     private double taxa;
 
     Risco(double taxa) {
+        this.taxa = taxa;
     }
 
     public double getTaxa() {

@@ -4,7 +4,7 @@ import br.com.zup.Modulo5_Investimento.Risco;
 import org.hibernate.validator.constraints.br.CPF;
 
 import javax.validation.constraints.Email;
-import javax.validation.constraints.Size;
+import javax.validation.constraints.Min;
 
 public class InvestimentoDTO {
     @Email
@@ -13,7 +13,7 @@ public class InvestimentoDTO {
     @CPF(message = "CPF inválido")
     private String cpf;
     private double valorInvestido;
-    @Size(min = 2, message = "Período mínimo de 2 meses para simular")
+    @Min(2)
     private int periodoDeAplicacaoMeses;
     private Risco risco;
 
@@ -67,5 +67,4 @@ public class InvestimentoDTO {
     public void setRisco(Risco risco) {
         this.risco = risco;
     }
-
 }

@@ -4,7 +4,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
-import java.util.List;
 
 @RestController
 @RequestMapping("/investimentos")
@@ -13,13 +12,15 @@ public class InvestimentoController {
     @Autowired
     private InvestimentoService investimentoService;
 
-    @GetMapping
-    public List<InvestimentoDTO> exibirInvestimentos (){
-        return investimentoService.exibirInvestimentos();
-    }
+//    @PutMapping
+//    public boolean retornarcadastroInvestimento(@RequestBody @Valid InvestimentoDTO investimentoDTO){
+//        boolean carteiraDTO = investimentoService.salvarInvestimento(investimentoDTO.getValorInvestido());
+//        return carteiraDTO;
+//    }
 
-    @PutMapping
-    public void cadastrarInvestimento(@RequestBody @Valid  InvestimentoDTO investimentoDTO){
-        investimentoService.salvarInvestimento(investimentoDTO);
-    }
+//    @GetMapping
+//    public double exibirInvestimentos (InvestimentoDTO investimentoDTO){
+//        return investimentoService.exibirResposta(investimentoDTO);
+//    }
+
 }
