@@ -1,5 +1,6 @@
-package br.com.zup.Modulo5_Investimento;
+package br.com.zup.Modulo5_Investimento.investimento;
 
+import br.com.zup.Modulo5_Investimento.Risco;
 import org.hibernate.validator.constraints.br.CPF;
 
 import javax.validation.constraints.Email;
