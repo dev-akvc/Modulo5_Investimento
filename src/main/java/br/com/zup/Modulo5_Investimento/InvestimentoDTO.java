@@ -5,7 +5,7 @@ import org.hibernate.validator.constraints.br.CPF;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.Size;
 
-public class CarteiraDTO {
+public class InvestimentoDTO {
     @Email
     private String email;
     private String nome;
@@ -16,7 +16,7 @@ public class CarteiraDTO {
     private int periodoDeAplicacaoMeses;
     private Risco risco;
 
-    public CarteiraDTO() {
+    public InvestimentoDTO() {
     }
 
     public String getEmail() {
