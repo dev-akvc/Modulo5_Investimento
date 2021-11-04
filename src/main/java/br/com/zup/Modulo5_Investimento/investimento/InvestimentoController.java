@@ -20,6 +20,6 @@ public class InvestimentoController {
 
     @PutMapping
     public void cadastrarInvestimento(@RequestBody @Valid  InvestimentoDTO investimentoDTO){
-        investimentoService.cadastrarInvestimento(investimentoDTO);
+        investimentoService.salvarInvestimento(investimentoDTO);
     }
 }

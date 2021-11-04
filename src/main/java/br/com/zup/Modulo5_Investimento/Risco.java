@@ -5,11 +5,12 @@ public enum Risco {
     MEDIO(0.015),
     ALTO(0.025);
 
+    private double taxa;
+
     Risco(double taxa) {
     }
 
-    public Risco getTaxa() {
-        return getTaxa();
+    public double getTaxa() {
+        return taxa;
     }
-
 }
