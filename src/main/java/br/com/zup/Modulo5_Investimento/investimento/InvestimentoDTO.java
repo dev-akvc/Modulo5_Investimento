@@ -12,7 +12,7 @@ public class InvestimentoDTO {
     private String nome;
     @CPF(message = "CPF inválido")
     private String cpf;
-    private double valorPrevisto;
+    private double valorInvestido;
     @Size(min = 2, message = "Período mínimo de 2 meses para simular")
     private int periodoDeAplicacaoMeses;
     private Risco risco;
@@ -44,12 +44,12 @@ public class InvestimentoDTO {
         this.cpf = cpf;
     }
 
-    public double getValorPrevisto() {
-        return valorPrevisto;
+    public double getValorInvestido() {
+        return valorInvestido;
     }
 
-    public void setValorPrevisto(double valorPrevisto) {
-        this.valorPrevisto = valorPrevisto;
+    public void setValorInvestido(double valorInvestido) {
+        this.valorInvestido = valorInvestido;
     }
 
     public int getPeriodoDeAplicacaoMeses() {

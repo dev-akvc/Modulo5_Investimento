@@ -1,10 +1,15 @@
 package br.com.zup.Modulo5_Investimento;
 
 public enum Risco {
-    BAIXO(0.05),
-    MEDIO(0.15),
-    ALTO(0.25);
+    BAIXO(0.005),
+    MEDIO(0.015),
+    ALTO(0.025);
 
-    Risco(double v) {
+    Risco(double taxa) {
     }
+
+    public Risco getTaxa() {
+        return getTaxa();
+    }
+
 }
