@@ -12,20 +12,20 @@ public class InvestimentoService {
 
     private List<InvestimentoDTO> investimentosDTOS = new ArrayList<>();
 
-    @Autowired
-    private InvestimentoDTO investimentoDTO;
-    private CarteiraDTO carteiraDTO;
-
-    public void cadastrarInvestimento(InvestimentoDTO novoInvestimento){
-        carteiraDTO.setValorInvestido(investimentoDTO.getValorInvestido());
-        double lucro = investimentoDTO.getRisco().ordinal() * investimentoDTO.getValorInvestido();
-        carteiraDTO.setValorTotalDolucro(lucro);
-        carteiraDTO.setValorTotal(carteiraDTO.getValorTotalDolucro() + carteiraDTO.getValorInvestido());
+    public void cadastrarInvestimento(InvestimentoDTO novoInvestimento) {
+        investimentoDTO.setValorInvestido(investimentoDTO.getValorInvestido());
+        investimentoDTO.setPeriodoDeAplicacaoMeses(investimentoDTO.getPeriodoDeAplicacaoMeses());
+        investimentoDTO.setRisco(investimentoDTO.getRisco().getTaxa());
         investimentosDTOS.add(novoInvestimento);
 
+    }
+
+    public void salvarInvestimento(InvestimentoDTO novoInvestimento){
+        investimentosDTOS.add(novoInvestimento);
     }
 
     public List<InvestimentoDTO> exibirInvestimentos() {
         return investimentosDTOS;
     }
+
 }

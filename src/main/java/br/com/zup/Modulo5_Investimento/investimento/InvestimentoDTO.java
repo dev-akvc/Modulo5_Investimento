@@ -67,4 +67,5 @@ public class InvestimentoDTO {
     public void setRisco(Risco risco) {
         this.risco = risco;
     }
+
 }

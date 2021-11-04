@@ -18,7 +18,7 @@ public class InvestimentoController {
         return investimentoService.exibirInvestimentos();
     }
 
-    @PutMapping("/{email}")
+    @PutMapping
     public void cadastrarInvestimento(@RequestBody @Valid  InvestimentoDTO investimentoDTO){
         investimentoService.cadastrarInvestimento(investimentoDTO);
     }
