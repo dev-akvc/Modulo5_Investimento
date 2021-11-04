@@ -16,12 +16,16 @@ public class InvestimentoService {
     private InvestimentoDTO investimentoDTO;
     private CarteiraDTO carteiraDTO;
 
-    public void cadastrarInvestimento(String email){
+    public void cadastrarInvestimento(InvestimentoDTO novoInvestimento){
         carteiraDTO.setValorInvestido(investimentoDTO.getValorInvestido());
         double lucro = investimentoDTO.getRisco().ordinal() * investimentoDTO.getValorInvestido();
         carteiraDTO.setValorTotalDolucro(lucro);
         carteiraDTO.setValorTotal(carteiraDTO.getValorTotalDolucro() + carteiraDTO.getValorInvestido());
+        investimentosDTOS.add(novoInvestimento);
 
     }
 
+    public List<InvestimentoDTO> exibirInvestimentos() {
+        return investimentosDTOS;
+    }
 }
